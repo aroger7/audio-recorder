@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+
+
+<html lang>
+
+
+<head>
+  <meta charset="utf-8">
+
+
+  <meta name="description"
+    content>
+
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1">
+
+  <title>Audio Recorder</title>
+
+  <link rel="apple-touch-icon"
+    href="apple-touch-icon.png">
+
+  <!-- Place favicon.ico in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <link 
+    rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" 
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" 
+    crossorigin="anonymous">
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+
+  <link rel="stylesheet"
+    href="styles/main.css">
+
+  <!-- endbuild -->
+</head>
+
+<body>
+  <!-- [if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif] -->
+
+    <div class="recorder full">
+      <div class="flex flex-v-center flex-h-center full">
+          <button class="record-button"></button>
+          <p class="recorder-error-msg removed"></p>
+      </div>
+    </div>
+    <div class="playback full removed">
+      <div class="playback-controls flex flex-v-center flex-h-center full">
+        <button class="playback-button playback-button-play-pause">
+          <i class="fas fa-play fa-2x"></i>
+        </button>
+        <button class="playback-button playback-button-stop">
+          <i class="fas fa-stop fa-2x"></i>
+        </button>
+        <button class="playback-button playback-button-download">
+        <i class="fas fa-download fa-2x"></i>
+        </button>        
+        <input class="playback-slider" type="range" min="0" max="100" value="0">
+        <div class="playback-time flex flex-v-center">
+          <p class="playback-time-current">00:00</p>
+          <p>/</p>
+          <p class="playback-time-total">--:--</p> 
+        </div>
+        <button class="playback-button playback-button-return">
+          <i class="fas fa-times fa-2x"></i>
+        </button>
+      <div>
+    </div>
+</div>
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <!-- endbower -->
+  <script src="/node_modules/timespan/browser/TimeSpan-1.2.min.js"></script>
+  <!-- endbuild -->
+  <!-- build:js scripts/main.js -->
+
+  <script src="scripts/main.js"></script>
+
+  <!-- endbuild -->
+</body>
+</html>
